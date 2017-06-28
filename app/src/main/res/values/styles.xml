@@ -24,16 +24,16 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
     <style name="Button" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="backgroundTint">@color/colorAccent</item>
         <item name="android:textSize">15sp</item>
     </style>
 
     <style name="Button.Green">
-        <item name="android:backgroundTint">@color/google_color_green</item>
+        <item name="backgroundTint">@color/google_color_green</item>
     </style>
 
     <style name="Button.Orange">
-        <item name="android:backgroundTint">@color/deep_orange_400</item>
+        <item name="backgroundTint">@color/deep_orange_400</item>
     </style>
 
     <style name="SwitchCompatGreen">

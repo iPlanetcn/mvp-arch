@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Button.Green">
+        <item name="android:backgroundTint">@color/google_color_green</item>
+    </style>
+
+    <style name="Button.Orange">
+        <item name="android:backgroundTint">@color/deep_orange_400</item>
+    </style>
+</resources>

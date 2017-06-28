@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.View;
 import android.widget.TextView;
 
 import com.childcare.app.BuildConfig;
@@ -64,16 +63,16 @@ public class SplashActivity extends BaseActivity implements SplashContract.View 
                     .replace(",", "\n");
             mTvInfo.setText(buildConfigInfo);
         }
+
+        findViewById(R.id.btn_open_main).setOnClickListener(v -> {
+            startActivity(MainActivity.getStartIntent(SplashActivity.this, true));
+           showOpenActivityTransition();
+        });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mPresenter.detachView();
-    }
-
-    public void openMain(View view) {
-        startActivity(MainActivity.getStartIntent(this, true));
-        super.showOpenActivityTransition();
     }
 }
