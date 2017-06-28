@@ -53,17 +53,17 @@ android {
     flavorDimensions "env"
     productFlavors {
         dev {
-            versionCode MAJOR * 1000000000 + MINOR * 1000000 + PATCH * 1000 + BUILD
-            versionName "${MAJOR}.${MINOR}.${PATCH}.${BUILD}"
-            buildConfigField("String", "BASE_URL", "\"${BASE_URL_TEST}\"")
+            versionCode rootProject.MAJOR * 1000000000 + rootProject.MINOR * 1000000 + rootProject.PATCH * 1000 + rootProject.BUILD
+            versionName "${rootProject.MAJOR}.${rootProject.MINOR}.${rootProject.PATCH}.${rootProject.BUILD}"
+            buildConfigField("String", "BASE_URL", "\"${rootProject.BASE_URL_TEST}\"")
             applicationIdSuffix ".dev"
             dimension "env"
         }
 
         prod {
-            versionCode MAJOR * 1000000 + MINOR * 1000 + PATCH
-            versionName "${MAJOR}.${MINOR}.${PATCH}"
-            buildConfigField("String", "BASE_URL", "\"${BASE_URL_PROD}\"")
+            versionCode rootProject.MAJOR * 1000000 + rootProject.MINOR * 1000 + rootProject.PATCH
+            versionName "${rootProject.MAJOR}.${rootProject.MINOR}.${rootProject.PATCH}"
+            buildConfigField("String", "BASE_URL", "\"${rootProject.BASE_URL_PROD}\"")
             dimension "env"
         }
     }
@@ -84,48 +84,48 @@ greendao {
 }
 
 dependencies {
-    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-intents:$espressoVersion"
-    androidTestCompile "org.mockito:mockito-core:$mockitoVersion"
-    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestCompile "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
-    compile "com.android.support:cardview-v7:$supportLibraryVersion"
-    compile "com.android.support:design:$supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
-    compile "com.android.support:support-annotations:$supportLibraryVersion"
-    compile "com.android.support:support-v4:$supportLibraryVersion"
-    compile "com.android.support:support-vector-drawable:$supportLibraryVersion"
-    compile "com.android.support:animated-vector-drawable:$supportLibraryVersion"
-    compile "com.android.support.constraint:constraint-layout:$constraitLayoutVersion"
-    compile "com.google.dagger:dagger:$daggerVersion"
-    compile "com.google.guava:guava:$guavaVersion"
-    compile "com.google.code.gson:gson:$gsonVersion"
-    compile "com.jakewharton:butterknife:$butterknifeVersion"
-    compile "com.jakewharton.timber:timber:$timberVersion"
-    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
-    compile "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
-    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
-    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-    compile "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
-    compile "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
-    compile "org.greenrobot:eventbus:$eventbusVersion"
-    compile "com.github.bumptech.glide:glide:$glideVersion"
-    compile "de.hdodenhof:circleimageview:$circleImageViewVersion"
-    compile "com.google.zxing:core:$zxingVersion"
-    compile "com.google.zxing:android-core:$zxingVersion"
-    compile "org.greenrobot:greendao:$greenDaoVersion"
-    compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:$brvahVersion"
-    testCompile "junit:junit:$junitVersion"
-    testCompile "org.mockito:mockito-core:$mockitoVersion"
-    testCompile "com.squareup.okhttp3:mockwebserver:$okhttpVersion"
-    testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+    compile "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
+    compile "com.android.support.constraint:constraint-layout:$rootProject.constraitLayoutVersion"
+    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+    compile "com.google.guava:guava:$rootProject.guavaVersion"
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+    compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    compile "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    compile "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$rootProject.okhttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    compile "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    compile "de.hdodenhof:circleimageview:$rootProject.circleImageViewVersion"
+    compile "com.google.zxing:core:$rootProject.zxingVersion"
+    compile "com.google.zxing:android-core:$rootProject.zxingVersion"
+    compile "org.greenrobot:greendao:$rootProject.greenDaoVersion"
+    compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.brvahVersion"
+    testCompile "junit:junit:$rootProject.junitVersion"
+    testCompile "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    testCompile "com.squareup.okhttp3:mockwebserver:$rootProject.okhttpVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
 }
 
 configurations.all {
-    resolutionStrategy.force "com.android.support:support-annotations:$supportLibraryVersion"
+    resolutionStrategy.force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 }
