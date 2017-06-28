@@ -1,0 +1,134 @@
+{
+  "code": 0,
+  "message": "获取测评条目列表成功！",
+  "data": [
+    {
+      "id": "04e9f472354c11e794d4fc15b421839c",
+      "title": "仰卧：不明确地凝视四周（*8周）",
+      "itemOrder": 2,
+      "itemType": "manyButton",
+      "scaleGesellChildAgeId": "w4",
+      "des": null,
+      "defaultSelect": null,
+      "defaultString": null,
+      "optionList": [
+        {
+          "id": "-2",
+          "title": "--"
+        },
+        {
+          "id": "-1",
+          "title": "±"
+        },
+        {
+          "id": "1",
+          "title": "+"
+        },
+        {
+          "id": "2",
+          "title": "++"
+        }
+      ],
+      "evaluationResults": null,
+      "weekAge": 4.0,
+      "monthAge": 0.93,
+      "regionId": null
+    },
+    {
+      "id": "0d5c8022354c11e794d4fc15b421839c",
+      "title": "社交：注意检查者，活动减少（*8周）",
+      "itemOrder": 8,
+      "itemType": "manyButton",
+      "scaleGesellChildAgeId": "w4",
+      "des": null,
+      "defaultSelect": null,
+      "defaultString": null,
+      "optionList": [
+        {
+          "id": "-2",
+          "title": "--"
+        },
+        {
+          "id": "-1",
+          "title": "±"
+        },
+        {
+          "id": "1",
+          "title": "+"
+        },
+        {
+          "id": "2",
+          "title": "++"
+        }
+      ],
+      "evaluationResults": null,
+      "weekAge": 4.0,
+      "monthAge": 0.93,
+      "regionId": null
+    },
+    {
+      "id": "1569a29e354c11e794d4fc15b421839c",
+      "title": "社交：目光跟随走动的人",
+      "itemOrder": 5,
+      "itemType": "manyButton",
+      "scaleGesellChildAgeId": "w4",
+      "des": null,
+      "defaultSelect": null,
+      "defaultString": null,
+      "optionList": [
+        {
+          "id": "-2",
+          "title": "--"
+        },
+        {
+          "id": "-1",
+          "title": "±"
+        },
+        {
+          "id": "1",
+          "title": "+"
+        },
+        {
+          "id": "2",
+          "title": "++"
+        }
+      ],
+      "evaluationResults": null,
+      "weekAge": 4.0,
+      "monthAge": 0.93,
+      "regionId": null
+    },
+    {
+      "id": "1daefead354c11e794d4fc15b421839c",
+      "title": "哺喂：夜间喂两次（*8周）",
+      "itemOrder": 4,
+      "itemType": "manyButton",
+      "scaleGesellChildAgeId": "w4",
+      "des": null,
+      "defaultSelect": null,
+      "defaultString": null,
+      "optionList": [
+        {
+          "id": "-2",
+          "title": "--"
+        },
+        {
+          "id": "-1",
+          "title": "±"
+        },
+        {
+          "id": "1",
+          "title": "+"
+        },
+        {
+          "id": "2",
+          "title": "++"
+        }
+      ],
+      "evaluationResults": null,
+      "weekAge": 4.0,
+      "monthAge": 0.93,
+      "regionId": null
+    }
+  ]
+}

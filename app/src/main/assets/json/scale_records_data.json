@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "message": "获取测评历史成功！",
+  "data": [
+    {
+      "date": "2017.01.04 17:40:43",
+      "score": "5",
+      "des": "你好啊",
+      "scaleType": "temperamentQuestionnaire",
+      "id": "48483412e8b043ddb8750a78ce7fe09d",
+      "title": "气质测评"
+    },
+    {
+      "date": "2017.01.04 17:40:43",
+      "score": "5",
+      "des": "你好啊",
+      "scaleType": "temperamentQuestionnaire",
+      "id": "48483412e8b043ddb8750a78ce7fe09d",
+      "title": "气质测评"
+    },
+    {
+      "date": "2017.01.04 17:40:43",
+      "score": "5",
+      "des": "你好啊",
+      "scaleType": "temperamentQuestionnaire",
+      "id": "48483412e8b043ddb8750a78ce7fe09d",
+      "title": "气质测评"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "code": 0,
+  "message": "获取儿童详情页成功！",
+  "data": {
+    "scaleList": [
+      {
+        "scaleType": "temperamentQuestionnaire",
+        "icon": "http://192.168.0.107:8080/06/images/pad/scale/temperamentQuestionnaire.png",
+        "name": "气质测评"
+      },
+      {
+        "scaleType": "gesellTest",
+        "icon": "http://192.168.0.107:8080/06/images/pad/scale/temperamentQuestionnaire.png",
+        "name": "Gesell(GDS)"
+      }
+    ],
+    "childDetailInfo": {
+      "gender": "男",
+      "reminder": "",
+      "name": "李承轩",
+      "motherName": "",
+      "cardType": "体验卡",
+      "id": "0631001200800003",
+      "age": "8岁10个月4天",
+      "highRiskFlag": false
+    }
+  }
+}

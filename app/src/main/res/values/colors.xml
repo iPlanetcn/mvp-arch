@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/grey_700</color>
+    <color name="colorPrimaryDark">@color/google_color_green</color>
+    <color name="colorAccent">@color/deep_orange_400</color>
+
+    <color name="toolbar_background">@color/alpha_color_black</color>
+
+    <color name="alpha_color_black">#88000000</color>
+    <color name="alpha_color_white">#88FFFFFF</color>
+
+    <color name="swipe_color_1">@color/google_color_yellow</color>
+    <color name="swipe_color_2">@color/google_color_blue</color>
+    <color name="swipe_color_3">@color/google_color_green</color>
+    <color name="swipe_color_4">@color/google_color_red</color>
+
+    <color name="text_color_deep_orange">@color/deep_orange_400</color>
+    <color name="text_color_orange">@color/orange_400</color>
+
+    <!-- colors for zxing -->
+    <color name="possible_result_points">#C0FFBD21</color>
+    <color name="result_points">#C099CC00</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_laser">#FFCC0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>

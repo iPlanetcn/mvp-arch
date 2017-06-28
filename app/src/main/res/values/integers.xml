@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_time_short">200</integer>
+    <integer name="anim_time_medium">500</integer>
+    <integer name="anim_time_long">800</integer>
+    <integer name="first_page">1</integer>
+    <integer name="page_size">10</integer>
+    <integer name="transaction_duration">300</integer>
+</resources>

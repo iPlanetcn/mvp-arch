@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/google_color_green</color>
+    <color name="colorPrimaryDark">@color/google_color_green</color>
+    <color name="toolbar_background">@color/colorPrimary</color>
+</resources>

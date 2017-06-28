@@ -1,0 +1,187 @@
+{
+  "code": 0,
+  "message": "获取气质量表详情成功！",
+  "data": {
+    "itemList": [
+      {
+        "id": "longActivity",
+        "title": "1、婴儿每天都有很长的时间醒着在活动吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "1",
+        "defaultString": null,
+        "evaluationResults": "1",
+        "optionList": [
+          {
+            "id": "1",
+            "title": "是"
+          },
+          {
+            "id": "0",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "regularPattern",
+        "title": "2、吃奶、排泄、睡眠和醒来都有规律吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "",
+        "defaultString": null,
+        "evaluationResults": "0",
+        "optionList": [
+          {
+            "id": "0",
+            "title": "是"
+          },
+          {
+            "id": "1",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "stopSucking",
+        "title": "3、周围偶尔发出的较大声响会使婴儿停止像吃奶这样的动作吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "1",
+        "defaultString": null,
+        "evaluationResults": "1",
+        "optionList": [
+          {
+            "id": "1",
+            "title": "是"
+          },
+          {
+            "id": "0",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "happyAttention",
+        "title": "4、有新的玩具呈现在眼前时，婴儿会显示关注或高兴的样子吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "",
+        "defaultString": null,
+        "evaluationResults": "1",
+        "optionList": [
+          {
+            "id": "0",
+            "title": "是"
+          },
+          {
+            "id": "1",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "changePlaceSleep",
+        "title": "5、改变睡眠的地方，婴儿会因此而哭闹难入睡吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "1",
+        "defaultString": null,
+        "evaluationResults": "0",
+        "optionList": [
+          {
+            "id": "1",
+            "title": "是"
+          },
+          {
+            "id": "0",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "activityAlone",
+        "title": "6、婴儿经常独自活动很长时间吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "",
+        "defaultString": null,
+        "evaluationResults": "0",
+        "optionList": [
+          {
+            "id": "1",
+            "title": "是"
+          },
+          {
+            "id": "0",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "cryAloud",
+        "title": "7、婴儿经常会使出很大的劲来拼命的大声哭吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "1",
+        "defaultString": null,
+        "evaluationResults": "0",
+        "optionList": [
+          {
+            "id": "1",
+            "title": "是"
+          },
+          {
+            "id": "0",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "stimulateBabyAlert",
+        "title": "8、只有非常强烈的刺激才有可能引起婴儿惊动吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "",
+        "defaultString": null,
+        "evaluationResults": "1",
+        "optionList": [
+          {
+            "id": "0",
+            "title": "是"
+          },
+          {
+            "id": "1",
+            "title": "否"
+          }
+        ]
+      },
+      {
+        "id": "bulkDateMerry",
+        "title": "9、婴儿大多数时候都显得快活吗？",
+        "des": null,
+        "itemType": "singleButton",
+        "defaultSelect": "1",
+        "defaultString": null,
+        "evaluationResults": "1",
+        "optionList": [
+          {
+            "id": "0",
+            "title": "是"
+          },
+          {
+            "id": "1",
+            "title": "否"
+          }
+        ]
+      }
+    ],
+    "itemHead": {
+      "date": "2017.05.02 19:12:19",
+      "score": 5,
+      "des": "慢慢活跃型：该型婴儿占总量的15%，他们不太活泼，时而大惊小怪，对新奇的东西倾向于消极的反应，但随着经验的增加，其反应会逐渐变得积极。",
+      "scaleType": "temperamentQuestionnaire",
+      "id": "8364d1b33b9d4b5681f33b5630c9d1fe",
+      "title": "你的宝宝测评结果是："
+    }
+  }
+}

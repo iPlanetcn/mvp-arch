@@ -1,0 +1,71 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+// 项目配置
+ext {
+    // Sdk and tools
+    minSdkVersion = 17
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.3'
+    applicationId = 'com.o6care.app'
+
+    // Base url config
+    BASE_URL_TEST = 'http://api.xxx.com/test/'
+    BASE_URL_PROD = 'http://api.xxx.com/prod/'
+
+    // build versions
+    MAJOR = 1
+    MINOR = 0
+    PATCH = 0
+    BUILD = new Date()[Calendar.DAY_OF_YEAR]
+    BUILD_TIME = new Date().format("yyyy-MM-dd HH:mm:ss",TimeZone.getTimeZone("UTC"))
+
+    // dependencies versions
+    supportLibraryVersion = '25.3.1'
+    butterknifeVersion = '8.6.0'
+    guavaVersion = '20.0'
+    constraitLayoutVersion = '1.0.2'
+    junitVersion = '4.12'
+    espressoVersion = '2.2.2'
+    retrofitVersion = '2.3.0'
+    okhttpVersion = '3.8.0'
+    rxjavaVersion = '2.0.1 '
+    rxandroidVersion = '2.0.1'
+    eventbusVersion = '3.0.0'
+    daggerVersion = "2.9"
+    gsonVersion = "2.8.0"
+    mockitoVersion = "1.10.19"
+    timberVersion = "4.5.1"
+    glideVersion = "3.8.0"
+    circleImageViewVersion = "2.1.0"
+    zxingVersion = "3.3.0"
+    greenDaoVersion = "3.2.2"
+    brvahVersion = "2.9.16"
+}

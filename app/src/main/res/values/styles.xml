@@ -1,0 +1,74 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/deep_orange_400</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+        <!--<item name="android:windowBackground">@drawable/img_main_background</item>-->
+    </style>
+
+    <style name="AppTheme.FullScreen.Splash">
+        <item name="android:windowBackground">@drawable/img_main_background</item>
+    </style>
+
+    <style name="AppTheme.FullScreen.Login">
+        <item name="android:windowBackground">@drawable/img_splash_background</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Button.Green">
+        <item name="android:backgroundTint">@color/google_color_green</item>
+    </style>
+
+    <style name="Button.Orange">
+        <item name="android:backgroundTint">@color/deep_orange_400</item>
+    </style>
+
+    <style name="SwitchCompatGreen">
+        <item name="colorControlActivated">@color/google_color_green</item>
+    </style>
+
+    <style name="WindowAnimationStyle" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressDialog" parent="@style/Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/google_color_green</item>
+        <item name="tabSelectedTextColor">@color/google_color_green</item>
+        <item name="tabTextAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="tabTextColor">@color/black_opacity_87</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorHeight">4dp</item>
+    </style>
+
+</resources>

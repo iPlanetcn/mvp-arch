@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'me.tatarka.retrolambda'
+apply from: '../config/quality/quality.gradle'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.applicationId
+        minSdkVersion rootProject.minSdkVersion
+        //noinspection OldTargetApi
+        targetSdkVersion rootProject.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField("String", "BUILD_TIME", "\"build at ${rootProject.BUILD_TIME}\"")
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            storePassword 'android'
+            keyPassword 'android'
+            storeFile file('keystore/debug.keystore')
+        }
+        release {
+            keyAlias 'androiddebugkey'
+            storePassword 'android'
+            keyPassword 'android'
+            storeFile file('keystore/debug.keystore')
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules-debug.pro'
+        }
+        release {
+            minifyEnabled true
+            debuggable false
+            signingConfig signingConfigs.release
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "env"
+    productFlavors {
+        dev {
+            versionCode MAJOR * 1000000000 + MINOR * 1000000 + PATCH * 1000 + BUILD
+            versionName "${MAJOR}.${MINOR}.${PATCH}.${BUILD}"
+            buildConfigField("String", "BASE_URL", "\"${BASE_URL_TEST}\"")
+            applicationIdSuffix ".dev"
+            dimension "env"
+        }
+
+        prod {
+            versionCode MAJOR * 1000000 + MINOR * 1000 + PATCH
+            versionName "${MAJOR}.${MINOR}.${PATCH}"
+            buildConfigField("String", "BASE_URL", "\"${BASE_URL_PROD}\"")
+            dimension "env"
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+greendao {
+    schemaVersion 1
+}
+
+dependencies {
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-intents:$espressoVersion"
+    androidTestCompile "org.mockito:mockito-core:$mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$supportLibraryVersion"
+    compile "com.android.support:design:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    compile "com.android.support:support-annotations:$supportLibraryVersion"
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+    compile "com.android.support:support-vector-drawable:$supportLibraryVersion"
+    compile "com.android.support:animated-vector-drawable:$supportLibraryVersion"
+    compile "com.android.support.constraint:constraint-layout:$constraitLayoutVersion"
+    compile "com.google.dagger:dagger:$daggerVersion"
+    compile "com.google.guava:guava:$guavaVersion"
+    compile "com.google.code.gson:gson:$gsonVersion"
+    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    compile "com.jakewharton.timber:timber:$timberVersion"
+    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    compile "org.greenrobot:eventbus:$eventbusVersion"
+    compile "com.github.bumptech.glide:glide:$glideVersion"
+    compile "de.hdodenhof:circleimageview:$circleImageViewVersion"
+    compile "com.google.zxing:core:$zxingVersion"
+    compile "com.google.zxing:android-core:$zxingVersion"
+    compile "org.greenrobot:greendao:$greenDaoVersion"
+    compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:$brvahVersion"
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.mockito:mockito-core:$mockitoVersion"
+    testCompile "com.squareup.okhttp3:mockwebserver:$okhttpVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+}
+
+configurations.all {
+    resolutionStrategy.force "com.android.support:support-annotations:$supportLibraryVersion"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Demo</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">@string/app_name</string>
+    <string name="dialog_action_cancel">取消</string>
+    <string name="dialog_action_ok">确定</string>
+    <string name="dialog_action_quit">退出</string>
+    <string name="dialog_title_reminder_tips">温馨提示</string>
+    <string name="noti_download_apk_complete_touch_install">下载完成，点击安装</string>
+    <string name="noti_download_apk_content_text">开始下载</string>
+    <string name="noti_download_apk_progress">下载中%1$d%%</string>
+    <string name="noti_download_apk_ticker">开始下载</string>
+    <string name="msg_download_error">下载出错</string>
+
+</resources>
