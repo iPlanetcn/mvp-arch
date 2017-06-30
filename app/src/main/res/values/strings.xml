@@ -15,6 +15,6 @@
     <string name="noti_download_apk_progress">下载中%1$d%%</string>
     <string name="noti_download_apk_ticker">开始下载</string>
     <string name="msg_download_error">下载出错</string>
-    <string name="info">Hello, this is add int version v1.0.3</string>
+    <string name="info">Will deploy multi files at v1.0.4</string>
 
 </resources>
