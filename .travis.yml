@@ -27,8 +27,8 @@ script:
 
 deploy:
   provider: releases
-  user: "iplanetcn@gmail.com"
-  password: "dlq870720"
+  api_key:
+      secure: ab290c69ad7a589dd6b10ea7f2b57d24e70d3031
   file: app/build/outputs/apk/app-prod-release.apk
   skip_cleanup: true
   on:
