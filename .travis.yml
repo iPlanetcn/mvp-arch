@@ -24,3 +24,12 @@ before_install:
 
 script:
   - ./gradlew assemble
+
+deploy:
+  provider: releases
+  user: "iplanetcn@gmail.com"
+  password: "dlq870720"
+  file: app/build/outputs/apk/app-prod-release.apk
+  skip_cleanup: true
+  on:
+    tags: false
