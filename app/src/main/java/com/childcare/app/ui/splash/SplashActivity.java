@@ -6,18 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.widget.TextView;
 
-import com.childcare.app.BuildConfig;
 import com.childcare.app.R;
 import com.childcare.app.ui.base.BaseActivity;
 import com.childcare.app.ui.main.MainActivity;
-import com.google.gson.GsonBuilder;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static java.lang.reflect.Modifier.TRANSIENT;
 
 /**
  * 启动界面
@@ -56,13 +52,15 @@ public class SplashActivity extends BaseActivity implements SplashContract.View 
         setUnBinder(ButterKnife.bind(this));
         mPresenter.attachView(this);
 
-        if (BuildConfig.DEBUG) {
-            String buildConfigInfo = new GsonBuilder().excludeFieldsWithModifiers(TRANSIENT)
-                    .create()
-                    .toJson(new BuildConfig())
-                    .replace(",", "\n");
-            mTvInfo.setText(buildConfigInfo);
-        }
+//        if (BuildConfig.DEBUG) {
+//            String buildConfigInfo = new GsonBuilder().excludeFieldsWithModifiers(TRANSIENT)
+//                    .create()
+//                    .toJson(new BuildConfig())
+//                    .replace(",", "\n");
+//            mTvInfo.setText(buildConfigInfo);
+//        }
+
+        mTvInfo.setText(R.string.info);
 
         findViewById(R.id.btn_open_main).setOnClickListener(v -> {
             startActivity(MainActivity.getStartIntent(SplashActivity.this, true));
