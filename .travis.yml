@@ -28,5 +28,5 @@ deploy:
   file: app/build/outputs/apk/app-prod-release.apk
   skip_cleanup: true
   on:
-    tags: false
+    tags: true
     repo: iPlanetcn/mvp-arch
