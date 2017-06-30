@@ -3,33 +3,30 @@ sudo: required
 jdk: oraclejdk8
 android:
   components:
-    - tools
-    - platform-tools
-    - build-tools-25.0.3
-    - android-25
-    - extra-android-m2repository
-    - extra-android-support
-
+  - tools
+  - platform-tools
+  - build-tools-25.0.3
+  - android-25
+  - extra-android-m2repository
+  - extra-android-support
   licenses:
-    - android-sdk-preview-license-.+
-    - android-sdk-license-.+
-    - google-gdk-license-.+
-
+  - android-sdk-preview-license-.+
+  - android-sdk-license-.+
+  - google-gdk-license-.+
 before_install:
-  - mkdir "$ANDROID_HOME/licenses" || true
-  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-  - chmod +x gradlew
-  - ./gradlew dependencies || true
-
+- mkdir "$ANDROID_HOME/licenses" || true
+- echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+- echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+- chmod +x gradlew
+- "./gradlew dependencies || true"
 script:
-  - ./gradlew assemble
-
+- "./gradlew assemble"
 deploy:
   provider: releases
   api_key:
-      secure: ab290c69ad7a589dd6b10ea7f2b57d24e70d3031
+    secure: qSPiLIHRiYvYza20qX8OLmx1jnflrjVdYixkPYtDdg7waunQsL4qF9ltjViHYMHhWixWCcPk9Apn3LboxErPNOOxs4DK3t8EIJaI3VukUxrEHfiN842ZFnA8hMEhV4fuiauIA/w0KsAXJVOGhK3bi7Slivzy2lB5bQFS0KEVAOSXgqx5EEow+2MKq/j7j9D6T6qdoSF3mvI1mv809AAdeq9uPe4nKhvgua5xQpa34J+Y1AB0IZZ3twDsuYSlhjxhRmSIPQg7uY2szpWo5YQta8eaTLabuSq5EdvR5vopp0/3p744zWxoOqFVMUGrHxoa5f3HAgodshsCB08rmB2hyHo+GM+3fqUUQCu2wPZhJkPcR8rvug3JDIqa7WL4H8D6Cqz9ASlvIU+6l+QsmUveK8ZWId/6sgALhYluPu2cZzVtNiJyBlFz9q0FGHRW69O39B2chRphAzetjB2H+ov+XAaak87/xidqOhrf1HD50sC5vmGxY/TUgSbT51FM2W6vWk8DZ15j1j2imk6hG77iTLl+8xjdbsLbEcE/iQiuagT7QGLoVYU9VAIvkbO/AiLBfW/FwGq0sP18ai8S2sopwN6CAWfMjHY8cQr+1kW0vZr/NWnBCZX3IXcTZ2AtirS6YY/DT3t+yHR+zhpVAuEBP+e9KfetqRgOiM+5VOFwXGY=
   file: app/build/outputs/apk/app-prod-release.apk
   skip_cleanup: true
   on:
     tags: false
+    repo: iPlanetcn/mvp-arch
