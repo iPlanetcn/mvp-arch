@@ -19,13 +19,13 @@ import timber.log.Timber;
  * @author john
  * @since 2017-03-21
  */
-public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
+public class BasePresenter<V extends MvpView> implements MvpPresenter<V> {
 
     private final DataManager mDataManager;
     private final SchedulerProvider mSchedulerProvider;
     private final CompositeDisposable mCompositeDisposable;
 
-    private T mView;
+    private V mView;
 
     public BasePresenter(DataManager dataManager,
                          SchedulerProvider schedulerProvider,
@@ -36,7 +36,7 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
     }
 
     @Override
-    public void attachView(T view) {
+    public void attachView(V view) {
         mView = view;
     }
 
@@ -62,7 +62,7 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
         return mView != null;
     }
 
-    public T getView() {
+    public V getView() {
         return mView;
     }
 
@@ -89,12 +89,12 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
     /**
      * 处理数据基类(消费者)
      *
-     * @param <D> 返回数据泛型
+     * @param <T> 返回数据泛型
      */
-    protected abstract class RespConsumer<D> implements Consumer<Resp<D>> {
+    protected abstract class RespConsumer<T> implements Consumer<Resp<T>> {
 
         @Override
-        public void accept(Resp<D> resp) throws Exception {
+        public void accept(Resp<T> resp) throws Exception {
             if (!isViewAttached()) {
                 return;
             }
@@ -119,14 +119,14 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
          *
          * @param data 返回数据
          */
-        protected abstract void success(D data);
+        protected abstract void success(T data);
     }
 
 
     /**
      * 添加观察订阅事件
      */
-    protected <D> void addSubscription(Observable<D> observable, Consumer<? super D> onNext) {
+    protected <T> void addSubscription(Observable<T> observable, Consumer<? super T> onNext) {
         getView().showLoadingIndicator(true);
         addSubscription(observable, onNext, this::handleError);
     }
@@ -136,8 +136,8 @@ public class BasePresenter<T extends MvpView> implements MvpPresenter<T> {
      * 添加观察订阅事件(包含错误处理)
      * 注意:调用该方法前,必须先调用或自定义getView().showLoadingIndicator(true);
      */
-    protected <D> void addSubscription(Observable<D> observable,
-                                       Consumer<? super D> onNext,
+    protected <T> void addSubscription(Observable<T> observable,
+                                       Consumer<? super T> onNext,
                                        Consumer<? super Throwable> onError) {
         getCompositeDisposable().add(observable.subscribeOn(getSchedulerProvider().io())
                                                .observeOn(getSchedulerProvider().ui())
