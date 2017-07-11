@@ -64,7 +64,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.View 
 
         findViewById(R.id.btn_open_main).setOnClickListener(v -> {
             startActivity(MainActivity.getStartIntent(SplashActivity.this, true));
-           showOpenActivityTransition();
+            showOpenActivityTransition();
         });
     }
 
