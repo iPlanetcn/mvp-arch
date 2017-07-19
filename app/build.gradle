@@ -74,9 +74,6 @@ android {
         exclude 'META-INF/LICENSE-FIREBASE.txt'
         exclude 'META-INF/NOTICE'
     }
-    lintOptions {
-        abortOnError false
-    }
 }
 
 greendao {
@@ -124,8 +121,4 @@ dependencies {
     testCompile "org.mockito:mockito-core:$rootProject.mockitoVersion"
     testCompile "com.squareup.okhttp3:mockwebserver:$rootProject.okhttpVersion"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
-}
-
-configurations.all {
-    resolutionStrategy.force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 }

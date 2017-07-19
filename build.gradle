@@ -20,10 +20,29 @@ allprojects {
         mavenCentral()
         maven { url "https://jitpack.io" }
     }
+
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// query git for the SHA, Tag and commit count. Use these to automate versioning.
+def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def gitTag = 'git describe --tags'.execute([], project.rootDir).text.trim()
+def gitCommitCount =
+        Integer.parseInt('git rev-list --count HEAD'.execute([], project.rootDir).text.trim())
+
+
+task printInfo{
+    doLast{
+        println("gitTag: " + gitTag)
+        println("gitCommitCount: " + gitCommitCount)
+        println("gitSha: " + gitSha)
+    }
 }
 
 
@@ -34,7 +53,7 @@ ext {
     targetSdkVersion = 25
     compileSdkVersion = 25
     buildToolsVersion = '25.0.3'
-    applicationId = 'com.o6care.app'
+    applicationId = 'com.childcare.app'
 
     // Base url config
     BASE_URL_TEST = 'http://api.xxx.com/test/'
