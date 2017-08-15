@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'me.tatarka.retrolambda'
 apply from: '../config/quality/quality.gradle'
-apply plugin:'im.fir.plugin.gradle'
+//apply plugin:'im.fir.plugin.gradle'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -124,7 +124,7 @@ dependencies {
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
 }
 
-fir{
-    apiToken "$rootProject.firApiToken"
-    changeLog 'git log --format=%B -n 1'.execute([], project.rootDir).text.trim()
-}
+//fir{
+//    apiToken "$rootProject.firApiToken"
+//    changeLog 'git log --format=%B -n 1'.execute([], project.rootDir).text.trim()
+//}
