@@ -2,15 +2,14 @@
 
 buildscript {
     repositories {
-        jcenter()
         google()
+        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
 //        maven { url "http://maven.bughd.com/public" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
 //        classpath 'im.fir:gradle-fir-publisher:1.0.7'
         // NOTE: Do not place your application dependencies here; they belong
@@ -20,8 +19,8 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url "http://maven.bughd.com/public" }
@@ -66,9 +65,9 @@ ext {
 
     // Sdk and tools
     minSdkVersion = 17
-    targetSdkVersion = 26
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.1'
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
     applicationId = 'com.childcare.app'
 
     // Base url config
@@ -83,24 +82,24 @@ ext {
     BUILD_TIME = new Date().format("yyyy-MM-dd HH:mm:ss",TimeZone.getTimeZone("UTC"))
 
     // dependencies versions
-    supportLibraryVersion = '26.0.0'
-    butterknifeVersion = '8.6.0'
+    supportLibraryVersion = '27.1.1'
+    butterknifeVersion = '8.8.1'
     guavaVersion = '20.0'
-    constraitLayoutVersion = '1.0.2'
+    constraitLayoutVersion = '1.1.0'
     junitVersion = '4.12'
     espressoVersion = '2.2.2'
     retrofitVersion = '2.3.0'
     okhttpVersion = '3.8.0'
-    rxjavaVersion = '2.0.1 '
-    rxandroidVersion = '2.0.1'
+    rxjavaVersion = '2.0.2 '
+    rxandroidVersion = '2.0.2'
     eventbusVersion = '3.0.0'
     daggerVersion = "2.9"
     gsonVersion = "2.8.0"
     mockitoVersion = "1.10.19"
-    timberVersion = "4.5.1"
+    timberVersion = "4.6.0"
     glideVersion = "3.8.0"
     circleImageViewVersion = "2.1.0"
     zxingVersion = "3.3.0"
     greenDaoVersion = "3.2.2"
-    brvahVersion = "2.9.16"
+    brvahVersion = "2.9.27"
 }
