@@ -93,7 +93,7 @@ ext {
     rxjavaVersion = '2.0.2 '
     rxandroidVersion = '2.0.2'
     eventbusVersion = '3.0.0'
-    daggerVersion = "2.9"
+    daggerVersion = "2.16"
     gsonVersion = "2.8.0"
     mockitoVersion = "1.10.19"
     timberVersion = "4.6.0"

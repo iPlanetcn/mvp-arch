@@ -13,8 +13,8 @@ import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.NotificationCompat;
 import android.webkit.MimeTypeMap;
 
 import com.childcare.app.R;
@@ -144,7 +144,7 @@ public class UpdateService extends Service {
                     message.what = DOWNLOAD_ERROR;
                 }
             } catch (Exception e) {
-                Timber.e("create download apk thread error", e.getMessage());
+                Timber.e(e.getMessage());
                 message.what = DOWNLOAD_ERROR;
             } finally {
                 mHandler.sendMessage(message);
@@ -209,7 +209,7 @@ public class UpdateService extends Service {
             mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
 
         } catch (Exception e) {
-            Timber.e("download apk error", e.getMessage());
+            Timber.e(e.getMessage());
         }
 
         return downloadCount;
@@ -219,7 +219,7 @@ public class UpdateService extends Service {
      * 下载通知栏消息
      */
     private void createUpdateNotification() {
-        mNotificationBuilder = new NotificationCompat.Builder(this);
+        mNotificationBuilder = new NotificationCompat.Builder(this,"channelId");
         Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
         mNotificationBuilder.setLargeIcon(largeIcon)
                             .setSmallIcon(R.drawable.ic_noti_download)
@@ -248,7 +248,7 @@ public class UpdateService extends Service {
                 }
             }
         } catch (IOException e) {
-            Timber.e("create apk file error", e.getMessage());
+            Timber.e(e.getMessage());
         }
     }
 

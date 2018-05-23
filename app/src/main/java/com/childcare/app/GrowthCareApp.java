@@ -2,6 +2,7 @@ package com.childcare.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 
 import com.childcare.app.data.DataManager;
 import com.childcare.app.di.component.ApplicationComponent;
@@ -59,7 +60,7 @@ public class GrowthCareApp extends Application {
      *
      * @param applicationComponent 测试组件
      */
-    @SuppressWarnings("unused")
+    @VisibleForTesting
     public void setComponent(ApplicationComponent applicationComponent) {
         mApplicationComponent = applicationComponent;
     }
